@@ -39,16 +39,25 @@ table, tr, td {
 <p id="testi"></p>
 
 <script>
-var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
 let txt = "";
+var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
 
-products.forEach(myFunction);
+var orderOfProducts = products.map(order)
+
+function order (value, index, array) {
+    return index + 1 + " " + value;
+}
+
+orderOfProducts.forEach(myFunction);
 document.getElementById("myTable").innerHTML = txt;
 
 function myFunction(value) {
     console.log("testi")
-    txt +=  "<tr><td>" + value + "</td></tr>";
+    txt += "<tr><td>" + value + "</td></tr>";
 }
+
+
+
 
 </script>
 </body>
