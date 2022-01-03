@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+
+table, tr, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: red;
+}
+</style>
+<body>
+
+<h2 class="title">Testing how to print values from array below each other in a table</h2>
+
+<table class="tbody">
+<tbody id="myTable"></tbody>
+</table>
+
+<p id="testi"></p>
+
+<script>
+var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
+let txt = "";
+
+products.forEach(myFunction);
+document.getElementById("myTable").innerHTML = txt;
+
+function myFunction(value) {
+    console.log("testi")
+    txt +=  "<tr><td>" + value + "</td></tr>";
+}
+
+</script>
+</body>
+</html> 
