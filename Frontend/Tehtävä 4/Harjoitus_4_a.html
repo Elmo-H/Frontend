@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: red;
+}
+</style>
+<body>
+
+<h2 class="title">Testing how to print values from array below eachother</h2>
+
+<p id="below"></p>
+
+<script>
+var products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
+
+
+let txt = "";
+products.forEach(myFunction);
+
+function myFunction(value) {
+  txt += value + "<br>";
+
+  document.getElementById("below").innerHTML = txt;
+}
+</script>
+</body>
+</html> 

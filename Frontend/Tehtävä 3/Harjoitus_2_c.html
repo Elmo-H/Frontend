@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4faa72;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+</style>
+<body>
+
+<h2 class="title">JavaScript Comparison</h2>
+
+<p class="text">Anna kesäpäivän lämpötila Celsius-asteina.</p>
+
+<div class="container">
+    <input id="temp" type="text" placeholder="Lämpötila" name="temp" required>
+</div>
+
+<div class="flex">
+    <button id="compare" type="button" onclick='comparison()'>Näe säätiedotus</button>
+    </div>
+ 
+<p id="demo"></p>
+
+<script>
+    function comparison() {
+        var x = document.getElementById('temp').value;
+        if(x >= 0 && x <= 10) {
+            document.getElementById('demo').innerHTML = "Kylmää";
+        }
+        else if(x >= 11 && x <= 15) {
+            document.getElementById('demo').innerHTML = "Koleaa";
+        }
+        else if(x >= 16 && x <= 20) {
+            document.getElementById('demo').innerHTML = "Melko lämmintä";
+        }
+        else if(x >= 21 && x <= 25) {
+            document.getElementById('demo').innerHTML = "Lämmintä";
+        }
+        else if (x >= 26) {
+            document.getElementById('demo').innerHTML = "Hellettä";
+        }
+    }   
+</script>
+
+</body>
+</html>

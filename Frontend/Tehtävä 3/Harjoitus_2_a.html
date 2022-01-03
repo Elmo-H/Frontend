@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2546ff;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+</style>
+<body>
+
+<h2 class="title">Javascript variables, event handling and functions</h2>
+
+<p class="text">Give to integers and press summ button</p>
+
+<div class="container">
+    <input id="sum1" type="text" placeholder="Sum 1" name="sum1" required>
+    <input id="sum2" type="text" placeholder="Sum 2" name="sum2" required>
+</div>
+
+<div class="flex">
+<button id="count" type="button" onclick='countSum()'>Sum</button>
+</div>
+
+<p class="text">Sum is</p>
+<p class="text" id='answer'></p>
+
+<script>
+    function countSum(){
+        var x = document.getElementById('sum1').value;
+        var y = document.getElementById('sum2').value;
+        var sum = 0;
+        sum = Number(x) + Number(y);
+        document.getElementById('answer').innerHTML = sum;
+        console.log("testi")
+    }
+</script>
+</body>
+</html> 

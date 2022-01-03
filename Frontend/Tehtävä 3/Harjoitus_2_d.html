@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #f13841;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.flex {
+    display: flex;
+    justify-content: start;
+}
+</style>
+<body>
+
+<h2 class="title">JavaScript Comparison</h2>
+
+<p class="text">Pick with dates with two calendars and press the button to see difference in days of the two dates.</p>
+
+<div class="container flex">
+    <label for="date1">Date 1: </label>
+    <input type="date" id="date1" name="date1">
+</div>
+
+<div class="container flex">
+    <label for="date2">Date 2: </label>
+    <input type="date" id="date2" name="date2">
+</div>
+
+<div class="flex">
+    <button id="compare" type="button" onclick='compareDates()'>See the difference</button>
+    </div>
+ 
+<p id="demo"></p>
+
+<script>
+    //const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    function compareDates() {
+        var a =  document.getElementById("date1").value;
+        var first = new Date(a);
+
+        var b = document.getElementById("date2").value;
+        var second = new Date(b);
+
+        var oneDay = 24 * 60 * 60 * 1000;
+        var diffDays = Math.abs((first.getTime() - second.getTime()) / (oneDay));
+
+        document.getElementById("demo").innerHTML = "The difference is " + diffDays;
+    }
+</script>
+
+</body>
+</html>

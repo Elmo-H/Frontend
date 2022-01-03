@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+</style>
+<body>
+  <table>
+
+    <th>Author</th>
+
+    <th>Title</th>
+
+    <th>LibraryID</th>
+
+  <tbody class="tbody" id="myTable">
+
+
+
+  </tbody>
+
+</table>
+
+
+
+<script>
+
+var library = [
+
+    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+
+    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+
+    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The HungerGames', libraryID: 3245}
+
+];
+
+var HtmlTxt = ""
+
+
+
+library.forEach(buildTable);
+
+document.getElementById("myTable").innerHTML = HtmlTxt;
+
+
+
+function buildTable(data) {
+
+      HtmlTxt += "<tr><td>" + data.author + "</td></tr>";
+      HtmlTxt += "<tr><td>" + data.title + "</td></tr>";
+
+}
+
+</script>
+
+</body>
+</html>

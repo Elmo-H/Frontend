@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    margin: 50px 100px;
+}
+button {
+    margin: 20px 20px 0 0px;
+}
+.title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: red;
+}
+</style>
+<body>
+
+<h2 class="title">Testing how to change the text and style of an element on the page</h2>
+
+<p id="demo" class="text">Mickey Mouse</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Donald Duck"'>Change name</button>
+<button type="button" onclick="document.getElementById('demo').style.color='blue'">Change color</button>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Mickey Mouse"'>Back to original name</button>
+<button type="button" onclick="document.getElementById('demo').style.color='red'">Back to original color</button>
+<button type="button" onclick="backToOriginal()">Back to original</button>
+
+<script>
+    function backToOriginal() {
+        document.getElementById('demo').style.color="red";
+        document.getElementById('demo').innerHTML = "Mickey Mouse";
+    }
+</script>
+</body>
+</html> 

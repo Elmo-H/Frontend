@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo"></p>
+
+<script>
+var student = {id: 123456, fname:"John", lname:"Doe", age: 48, allInfo: function(){return this.id + " " + this.fname + " " + this.lname + " " + this.age;}};
+
+document.getElementById("demo").innerHTML = "This is student info " + student.allInfo();
+console.log("testi")
+</script>
+
+</body>
+</html>
