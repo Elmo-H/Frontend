@@ -42,18 +42,9 @@ table, tr, td {
 let txt = "";
 let products = ["milk", "coffee", "juice", "lemonade", "beer", "sour milk"];
 
-let letterFilter = products.filter(filterLetter)
+products.sort();
 
-function filterLetter (value) {
-    if(value[0] == "m" || value[0] == "j") {
-        return true
-    }
-    else {
-        return false
-    }
-}
-
-letterFilter.forEach(myFunction);
+products.forEach(myFunction);
 document.getElementById("myTable").innerHTML = txt;
 
 function myFunction(value) {
